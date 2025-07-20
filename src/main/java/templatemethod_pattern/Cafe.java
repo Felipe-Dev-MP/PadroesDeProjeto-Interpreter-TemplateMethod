@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package templatemethod_pattern;
 
-/**
- *
- * @author felip
- */
-public class Cafe {
+public class Cafe 
+        extends BebidaQuente {
     
+    @Override
+    protected void adicionarIngredientes() {
+        System.out.println("Adicionando pó de café");
+    }
+    
+    @Override
+    protected void adicionarCondimentos() {
+        System.out.println("Adicionando açúcar e leite");
+    }
 }

@@ -13,6 +13,6 @@ public class Subtracao
     
     @Override
     public int interpretar(){
-        return esquerda.interpretar() + direita.interpretar();
+        return esquerda.interpretar() - direita.interpretar();
     }
 }

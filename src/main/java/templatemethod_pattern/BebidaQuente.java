@@ -1,13 +1,22 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package templatemethod_pattern;
 
-/**
- *
- * @author felip
- */
-public class BebidaQuente {
+public abstract class BebidaQuente {
     
+    public final void prepararReceita() {
+        ferverAgua();
+        adicionarIngredientes();
+        despejarNoCopo();
+        adicionarCondimentos();
+    }
+
+    protected abstract void adicionarIngredientes();
+    protected abstract void adicionarCondimentos();
+
+    private void ferverAgua(){ 
+        System.out.println("Fervendo água"); 
+    }
+    
+    private void despejarNoCopo(){ 
+        System.out.println("Despejando no copo");
+    }
 }
