@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package interpreter_pattern;
 
-/**
- *
- * @author felip
- */
 public class Calculadora {
-    
+    public static void main(String[] args) {
+        Expressao expr = new Subtracao(
+            new Soma(new Numero(15), new Numero(10)),
+            new Numero(4)
+        );
+        System.out.println("Resultado: " + expr.interpretar());
+    }
 }

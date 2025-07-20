@@ -1,13 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package interpreter_pattern;
 
-/**
- *
- * @author felip
- */
-public class Soma {
+public class Soma 
+        implements Expressao{
+    
+    private final Expressao esquerda;
+    private final Expressao direita;
+    
+    public Soma(Expressao esq, Expressao dir){
+        this.direita = dir;
+        this.esquerda = esq;
+    }
+    
+    @Override
+    public int interpretar(){
+        return esquerda.interpretar() + direita.interpretar();   
+    }
     
 }

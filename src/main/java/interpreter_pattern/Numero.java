@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package interpreter_pattern;
 
-/**
- *
- * @author felip
- */
-public class Numero {
+public class Numero 
+        implements Expressao{
     
+    private final int valor;
+
+    public Numero(int valor){ 
+        this.valor = valor; 
+    }
+
+    @Override
+    public int interpretar(){ 
+        return this.valor; 
+    }
 }
