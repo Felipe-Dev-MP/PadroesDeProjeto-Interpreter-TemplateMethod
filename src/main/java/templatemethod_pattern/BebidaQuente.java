@@ -7,6 +7,10 @@ public abstract class BebidaQuente {
         adicionarIngredientes();
         despejarNoCopo();
         adicionarCondimentos();
+        
+        if (clienteQuerCondimentos()) {
+            adicionarCondimentos();
+        }
     }
 
     protected abstract void adicionarIngredientes();
@@ -18,5 +22,9 @@ public abstract class BebidaQuente {
     
     private void despejarNoCopo(){ 
         System.out.println("Despejando no copo");
+    }
+    
+    protected boolean clienteQuerCondimentos() {
+        return true;
     }
 }

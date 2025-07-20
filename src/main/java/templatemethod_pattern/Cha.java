@@ -12,4 +12,9 @@ public class Cha
     protected void adicionarCondimentos() {
         System.out.println("Adicionando limão");
     }
+    
+    @Override
+    protected boolean clienteQuerCondimentos() {
+        return false;
+    }
 }
